@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "宝宝基本信息.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "宝宝基本信息"
+              "title": "README"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "宝宝基本信息.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 宝宝基本信息"
+              "title": "Backlinks for README"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "宝宝基本信息.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 宝宝基本信息"
+              "title": "Outgoing links from README"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "宝宝基本信息.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 宝宝基本信息"
+              "title": "Outline of README"
             }
           }
         ]
@@ -185,13 +185,14 @@
   },
   "active": "598d3c194991fd79",
   "lastOpenFiles": [
+    "哄睡步骤.md",
+    "宝宝基本信息.md",
     "健康记录/疫苗.md",
     "睡眠记录/2026-05.md",
     "里程碑.md",
     "育儿宗旨.md",
     "README.md",
     "健康记录",
-    "睡眠记录",
-    "宝宝基本信息.md"
+    "睡眠记录"
   ]
 }
