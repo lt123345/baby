@@ -1,0 +1,7 @@
+# Claude Code local state
+.claude/settings.local.json
+.claude/worktrees/
+
+# Obsidian workspace (per-machine UI state)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
