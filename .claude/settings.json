@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cd \"$CLAUDE_PROJECT_DIR\" && if [ -n \"$(git status --porcelain)\" ]; then echo \"未提交改动：$(git status --porcelain | head -5)。按 CLAUDE.md「哄睡信息自动记录」约定，现在执行 git add + commit + push（push 被拒先 git pull -r）。\" >&2; exit 2; fi; if [ -n \"$(git log origin/main..HEAD --oneline 2>/dev/null)\" ]; then echo \"有本地提交未 push：$(git log origin/main..HEAD --oneline | head -5)。现在执行 git push（被拒先 git pull -r）。\" >&2; exit 2; fi; exit 0"
+            "command": "cd \"$CLAUDE_PROJECT_DIR\" && if [ -n \"$(git status --porcelain)\" ]; then echo \"未提交改动：$(git status --porcelain | head -5)。按 CLAUDE.md「信息自动记录」约定，现在执行 git add + commit + push（push 被拒先 git pull -r）。\" >&2; exit 2; fi; if [ -n \"$(git log origin/main..HEAD --oneline 2>/dev/null)\" ]; then echo \"有本地提交未 push：$(git log origin/main..HEAD --oneline | head -5)。现在执行 git push（被拒先 git pull -r）。\" >&2; exit 2; fi; exit 0"
           }
         ]
       }
