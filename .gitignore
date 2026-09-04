@@ -5,3 +5,8 @@
 # Obsidian workspace (per-machine UI state)
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
+.obsidian/community-plugins.json
+.obsidian/plugins/
+
+# Claudian (per-machine local state)
+.claudian/
