@@ -1,0 +1,24 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'/Users/jiaoma/ws/baby/.codex/hooks/inject-datetime.sh'"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'/Users/jiaoma/ws/baby/.codex/hooks/check-committed.sh'"
+          }
+        ]
+      }
+    ]
+  }
+}
