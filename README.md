@@ -13,4 +13,4 @@
 | `睡眠记录/YYYY-MM.md` | 月度睡眠日志（日期倒序）         |
 | `健康记录/`           | 疫苗、就诊、用药             |
 
-> LLM / Claude Code 的使用指引、编辑约定、工作流偏好统一放在 [`CLAUDE.md`](./CLAUDE.md)。
+> LLM / Claude Code / Codex 的使用指引、编辑约定、工作流偏好统一放在 [`AGENTS.md`](./AGENTS.md)。

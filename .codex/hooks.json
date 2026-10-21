@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "'/Users/jiaoma/ws/baby/.codex/hooks/inject-datetime.sh'"
+            "command": "\"$(git rev-parse --show-toplevel)/.codex/hooks/inject-datetime.sh\""
           }
         ]
       }
@@ -15,7 +15,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "'/Users/jiaoma/ws/baby/.codex/hooks/check-committed.sh'"
+            "command": "\"$(git rev-parse --show-toplevel)/.codex/hooks/check-committed.sh\""
           }
         ]
       }

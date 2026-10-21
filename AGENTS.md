@@ -56,7 +56,7 @@
 **Why**：2026-09-03 发现长会话（470k tokens）里日期写错。会话开头注入的 `currentDate` 只准一次，跨天/跨半夜后就过期，凭印象写必错。
 
 **How**：
-- `.Codex/hooks/inject-datetime.sh`（UserPromptSubmit hook）每轮自动注入"当前时间：…"一行，**优先用它**，它比会话开头的 `currentDate` 新。
+- `.codex/hooks/inject-datetime.sh`（UserPromptSubmit hook）每轮自动注入"当前时间：…"一行，**优先用它**，它比会话开头的 `currentDate` 新。
 - 但注入的是**用户发消息那一刻**的时间。长会话里单轮跨了很久、或跨半夜时仍可能过期 —— 写文件前再跑一次 `date '+%Y-%m-%d %H:%M'` 确认。
 - 凌晨记录尤其注意：用户说"昨晚"时，日期归属按睡眠记录惯例判断，但**当前时间仍以 `date` 为准**。
 
@@ -88,7 +88,7 @@
 
 跑 `git push` / `git pull` / `git commit` 等命令时**单独跑裸命令**，不要写成 `cd <path> && git push …` 或用 `;` 串多条。
 
-**Why**：2026-09-22 连续两次 `git push` 被 auto mode 分类器拦下（判为 Out-of-Place Publication）。`.Codex/settings.json` 里已有 `Bash(git push:*)` 允许规则，但**带 `&&` / `;` 的复合命令匹配不上 `git` 前缀规则**，直接掉到分类器手里。裸 `git push` 一次就过。
+**Why**：2026-09-22 连续两次 `git push` 被 auto mode 分类器拦下（判为 Out-of-Place Publication）。`.claude/settings.json` 里已有 `Bash(git push:*)` 允许规则，但**带 `&&` / `;` 的复合命令匹配不上 `git` 前缀规则**，直接掉到分类器手里。裸 `git push` 一次就过。
 
 **How**：
 - Bash 工具的工作目录在会话内是保持的，本来就在仓库根目录，**不需要 `cd`**。

@@ -1,6 +1,6 @@
 #!/bin/bash
-# Stop hook：结束回答前确保改动已 commit & push（CLAUDE.md「信息自动记录」约定）。
-# 退出码语义：0=放行，2=阻止结束并把 stderr 反馈给 Claude。
+# Stop hook：结束回答前确保改动已 commit & push（AGENTS.md「信息自动记录」约定）。
+# 退出码语义：0=放行，2=阻止结束并把 stderr 反馈给 LLM。
 
 input=$(cat)
 
@@ -12,10 +12,13 @@ if [ "$active" = "True" ]; then
   exit 0
 fi
 
-cd "$CLAUDE_PROJECT_DIR" || exit 0
+project_dir=$(git rev-parse --show-toplevel 2>/dev/null) || project_dir=""
+[ -n "$project_dir" ] || project_dir="${CLAUDE_PROJECT_DIR:-}"
+[ -n "$project_dir" ] || exit 0
+cd "$project_dir" || exit 0
 
 if [ -n "$(git status --porcelain)" ]; then
-  echo "未提交改动：$(git status --porcelain | head -5)。按 CLAUDE.md「信息自动记录」约定，现在执行 git add + commit + push（push 被拒先 git pull -r）。若是无关的临时文件则忽略本提示。" >&2
+  echo "未提交改动：$(git status --porcelain | head -5)。按 AGENTS.md「信息自动记录」约定，现在执行 git add + commit + push（push 被拒先 git pull -r）。若是无关的临时文件则忽略本提示。" >&2
   exit 2
 fi
 
